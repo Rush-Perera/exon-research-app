@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 18, 2023 10:03:07 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.Research" table="research" catalog="exon_research_db2" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="area" class="mapping.Area" fetch="select">
+            <column name="area_id" not-null="true" />
+        </many-to-one>
+        <property name="topic" type="string">
+            <column name="topic" length="45" />
+        </property>
+        <property name="researchAbstract" type="string">
+            <column name="research_abstract" length="450" />
+        </property>
+        <property name="docPath" type="string">
+            <column name="doc_path" length="45" />
+        </property>
+        <property name="imgPath" type="string">
+            <column name="img_path" length="45" />
+        </property>
+        <property name="keywords" type="string">
+            <column name="keywords" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 18, 2023 10:03:07 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.Author" table="author" catalog="exon_research_db2" optimistic-lock="version">
+        <id name="nic" type="string">
+            <column name="nic" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="45" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="45" />
+        </property>
+        <property name="institution" type="string">
+            <column name="institution" length="45" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
